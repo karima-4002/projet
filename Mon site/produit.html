@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits</title>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Add your CSS styles here */
+        .col-4 {
+            flex-basis: 25%;
+            min-width: 200px;
+            padding: 15px;
+            transition: .5s;
+            text-align: center;
+        }
+        .col-4 img{
+      width: 30%;
+    }
+.col-4:hover{
+  transform: translateY(-10px);
+ }
+         .rating {
+            color: gold;
+        }
+
+        button {
+    background-color: #4fb353; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: rgb(240, 208, 208); 
+}
+
+select {
+    padding: 8px 16px; 
+    border: 1px solid rgb(240, 208, 208); 
+    border-radius: 5px; 
+    background-color: rgb(240, 208, 208); 
+    font-size: 16px; 
+}
+
+/* Style des options */
+option {
+    padding: 8px 16px; 
+    border-bottom: 1px solid rgb(240, 208, 208); 
+    font-size: 16px; 
+}
+
+/* Style pour le survol */
+option:hover {
+    background-color: rgb(240, 208, 208);
+}
+a{
+  text-decoration: none;
+  font-weight: 600;
+}
+.navbar{
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-weight: bold;
+}
+.navbar .logo{
+  font-size: 2em;
+  color:rgb(194, 68, 68);
+  user-select: none;
+  font-weight: bold;
+}
+
+nav{
+  flex: 1;
+  text-align:center;
+  font-weight: bold;
+}
+nav ul{
+  display: inline-block;
+  list-style-type: none;
+}
+nav ul li{
+  display: inline-block;
+  margin-right: 20px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: rgb(194, 68, 68);
+  font-size: 18px;
+}
+nav ul li a:hover{
+  border-bottom: 4px solid rgb(180, 111, 111);
+}
+
+
+.fa-search{
+  position: absolute;
+  left: 82%;
+  top:9%;
+  color:  rgb(194, 68, 68);
+}
+.fa-user{
+  position: absolute;
+  left: 85%;
+  top:9%;;
+  color:  rgb(194, 68, 68);
+}
+.fa-shopping-cart{
+  position: absolute;
+  left: 88%;
+  top:9%;;
+  color:  rgb(194, 68, 68);
+
+}
+button{
+    padding: 10px 20px;
+  outline: none;
+  border: 2px solid transparent ;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  }
+button:hover{
+  background: transparent;
+  border: 2px solid brown;
+  color: rgb(194, 68, 68);
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <a href="#" class="logo">Kima Fashion</a>
+        <nav>
+            <div class="menu">
+            <ul>
+                <li><a href="index.html">Accuiel</a></li>
+                <li><a href="produit.html">Produits</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+                <a href="login.html"><button>Login</button></a>
+                <a href="signup.html"><button>Signup</button></a>
+        </div>
+        </nav>
+            <div class="icons">
+                <a href="#" class="fas fa-search"></a>
+               <a href="#" class="fas fa-user"></a>
+               <a href="panier.html" class="fas fa-shopping-cart"></a>
+            </div>
+        </header>
+
+<!--produits-->
+<section class="featured-products">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src="produit10.jpg" alt="produit 10">
+                <h3>Chemise-blue</h3>
+                <div class="rating">
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <p>250DH</p>
+                <p>Description: un classique polyvalent, idéal pour une tenue décontractée ou professionnelle.</p>
+                <select>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <select>
+                    <option value="blue">Blue</option>
+                    <option value="white">White</option>
+                    <option value="red">Red</option>
+                </select>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <!-- Repeat the same structure for other products -->
+            <div class="col-4">
+                <img src="produit11.jpg" alt="produit 11">
+                <h3>Pink Chic Ruffles Blouse</h3>
+                <div class="rating">
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <p>300DH</p>
+                <p>Description: La blouse Pink Chic Ruffles incarne l'élégance féminine avec ses ruffles délicats et sa couleur rose douce. </p>
+                <select>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <select>
+                    <option value="blue">Pink</option>
+                    <option value="white">White</option>
+                    <option value="red">Red</option>
+                </select>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="col-4">
+                <img src="produit12.jpg" alt="produit 12">
+                <h3>Plaid Shirt</h3>
+                <div class="rating">
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <p>800DH</p>
+                <p>Description: La chemise à carreaux : un essentiel classique pour un style décontracté et polyvalent.</p>
+                <select>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <select>
+                    <option value="blue">White</option>
+                    <option value="white">black</option>
+                    <option value="red">gris</option>
+                </select>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+        
+            <div class="col-4">
+                <img src="produit13.jpg" alt="produit 13">
+                <h3>Robe en maille ornée de sequins et perles</h3>
+                <div class="rating">
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <p>1000DH</p>
+                <p> une pièce élégante et étincelante pour des occasions spéciales.</p>
+                <select>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <select>
+                    <option value="blue">White</option>
+                    <option value="white">black</option>
+                </select>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <div class="col-4">
+                <img src="produit14.jpg" alt="produit 14">
+                  <h3> Robe longue élégante A-line en mesh</h3>
+                <div class="rating">
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star" ></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half"></i>
+                </div>
+                <p>2000DH</p>
+                <p>Description: un essentiel chic pour un style sophistiqué et féminin.</p>
+                <select>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                </select>
+                <select>
+                    <option value="blue">black</option>
+                    <option value="white">White</option>
+                </select>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+
+
+        
+        </div>
+    </div>
+</section>
+
+<script>
+    function addToCart() {
+        alert("Product added to cart!");
+        // Add logic to add the selected product to the cart
+    }
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kima Fashion</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-weight: bold;
+            font-family: "Playfair Display", serif;
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .navbar {
+            height: 30px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            font-weight: bold;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+
+        .navbar .logo {
+            font-size: 2em;
+            color: rgb(194, 68, 68);
+            user-select: none;
+            font-weight: bold;
+        }
+
+        nav {
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(194, 68, 68);
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            border-bottom: 4px solid rgb(180, 111, 111);
+        }
+        
+        button {
+            padding: 10px 20px;
+            outline: none;
+            border: 2px solid transparent;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        button:hover {
+            background: transparent;
+            border: 2px solid brown;
+            color: rgb(194, 68, 68);
+        }
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('kk.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .login-container {
+            background: rgb(180, 111, 111);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgb(180, 111, 111);
+            text-align: center;
+            transition: transform 0.5s;
+            width: 400px;
+            margin-top: 120px; /* Ajout d'une marge pour séparer du navbar */
+        }
+
+        .form-control {
+            margin-bottom: 10px;
+            text-align: left;
+            color: #fff;
+        }
+
+        .form-control label {
+            color: brown;
+        }
+
+        .form-control input,
+        .form-control select {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background: #222;
+            color: #fff;
+            transition: all 0.3s;
+        }
+
+        .form-control input:focus,
+        .form-control select:focus {
+            border-color: indianred;
+            box-shadow: 0 0 8px indianred;
+            outline: none;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(226, 126, 126);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 16px;
+        }
+
+        .btn:active {
+            transform: translateY(2px);
+        }
+
+        .btn:hover {
+            background-color: brown;
+        }
+
+        .error-message {
+            color: #ff0000;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="#" class="logo">Kima Fashion</a>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="produit.html">Produits</a></li>
+                    <li><a href="#apropos">À propos</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                </ul>
+                <a href="login.html"><button>Login</button></a>
+                <a href="signup.html"><button>Signup</button></a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form class="login-form">
+            <div class="form-control">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" placeholder="Entrez votre nom d'utilisateur" required>
+            </div>
+            <div class="form-control">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" placeholder="Entrez votre mot de passe" required>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Entrez votre email" required>
+            </div>
+            <div class="form-control">
+                <label for="age">Âge</label>
+                <input type="number" id="age" placeholder="Entrez votre âge" required>
+            </div>
+            <div class="form-control">
+                <label for="phone">Numéro de téléphone</label>
+                <input type="tel" id="phone" placeholder="Entrez votre numéro de téléphone" required>
+            </div>
+            <div class="form-control">
+                <label for="gender">Genre</label>
+                <select id="gender" required>
+                    <option value="">Sélectionnez votre genre</option>
+                    <option value="male">Homme</option>
+                    <option value="female">Femme</option>
+                    <option value="other">Autre</option>
+                </select>
+            </div>
+            <button type="submit" class="btn"><a href="index.html"></a>login</button>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector('.login-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var email = document.getElementById('email').value;
+            var age = document.getElementById('age').value;
+            var phone = document.getElementById('phone').value;
+            var gender = document.getElementById('gender').value;
+            var valid = true;
+
+            // Validation de l'email
+            if (!email.match(/^\S+@\S+\.\S+$/)) {
+                alert('Une adresse email valide est requise.');
+                valid = false;
+            }
+
+            // Validation de l'âge
+            if (age < 18) {
+                alert('Vous devez avoir au moins 18 ans.');
+                valid = false;
+            }
+
+            // Validation du numéro de téléphone
+            if (!phone.match(/^\d{10}$/)) {
+                alert('Un numéro de téléphone valide est requis.');
+                valid = false;
+            }
+
+            // Validation du genre
+            if (!gender) {
+                alert('Veuillez sélectionner votre genre.');
+                valid = false;
+            }
+
+            if (valid) {
+                // Logique d'envoi des données
+                console.log('Tentative de connexion avec:', username, password, email, age, phone, gender);
+            }
+        });
+    </script>
+</body>
+
+</html>
+

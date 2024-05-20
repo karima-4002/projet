@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Jost:ital@1&family=PT+Sans+Narrow:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Inter Tight", sans-serif;
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+a{
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar{
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-weight: bold;
+}
+.navbar .logo{
+  font-size: 2em;
+  color:rgb(194, 68, 68);
+  user-select: none;
+  font-weight: bold;
+}
+
+nav{
+  flex: 1;
+  text-align:center;
+  font-weight: bold;
+}
+nav ul{
+  display: inline-block;
+  list-style-type: none;
+}
+nav ul li{
+  display: inline-block;
+  margin-right: 20px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: rgb(194, 68, 68);
+  font-size: 18px;
+}
+nav ul li a:hover{
+  border-bottom: 4px solid rgb(180, 111, 111);
+}
+
+
+.fa-search{
+  position: absolute;
+  left: 82%;
+  top:9%;
+  color:  rgb(194, 68, 68);
+}
+.fa-user{
+  position: absolute;
+  left: 85%;
+  top:9%;;
+  color:  rgb(194, 68, 68);
+}
+.fa-shopping-cart{
+  position: absolute;
+  left: 88%;
+  top:9%;;
+  color:  rgb(194, 68, 68);
+
+}
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.col-2{
+  flex-basis: 50%;
+  min-width: 300px;
+  text-align: left;
+}
+.col-2 img{
+width: 100%;
+padding: 64px 0;
+}
+
+.col-2 h1{
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+.col-2 a{
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color:indianred ;
+  color: salmon;
+  border-radius: 30px;
+  margin-top: 25px;
+  transition: .3s;
+}
+.col-2 a:hover{
+  background: brown;
+}
+p{
+  color:rgb(211, 112, 112);
+}
+.header-section{
+  background:  rgb(240, 208, 208);
+}
+/* style de la section categories*/
+.categories{
+  margin: 70px 0;
+}
+.col-3{
+  flex-basis: 30%;
+  min-width: 250px;
+  margin: auto;
+}
+.col-3 img{
+  width: 100%;
+}
+.container h2{
+  text-align: center;
+  font-size: 2.2rem;
+  color: indianred;
+  margin: 50px 0;
+}
+/* style de la section meilleurs produits */
+.col-4{
+  flex-basis: 25%;
+  min-width: 200px;
+  padding:15px;
+  transition: .5s;
+}
+.col-4 img{
+  width: 100%;
+}
+.col-4:hover{
+  transform: translateY(-10px);
+}
+.rating{
+  color: gold;
+}
+/* footer*/
+*{
+  padding:0 ;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+footer .container{
+  background-color: rgb(240, 208, 208);
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px;
+}
+.footer-col ul{
+  list-style: none;
+}
+.footer-col h4{
+  color: white;
+  margin-bottom: 30px;
+  font-size: 22px;
+  position: relative;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+.footer-col h4::before{
+  content:'';
+  width: 50px;
+  height: 2px;
+  position: absolute;
+  background-color: brown;
+  bottom: -10px;
+  left: 0;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-decoration: none;
+  color: darkgray;
+  font-weight: bold;
+  display: block;
+  transition: all .3s ease;
+  margin-bottom: 10px;
+}
+.footer-col ul li a:hover{
+  color: brown;
+  padding-left: 6px;
+}
+.footer-col .social-link a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background: rgb(211, 112, 112);
+  margin:  0 10px 10px 0 ;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: brown;
+  transition: all .5s ease;
+}
+.footer-col .social-link a:hover{
+  color: brown;
+  background: #fff;
+}
+.footer-col{
+  background-color: rgb(240, 208, 208);
+}
+.footer-col .marKdown {
+  font-size: 15px;
+  color:brown;
+
+}
+.footer-col .marKdown p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-weight: bold
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
